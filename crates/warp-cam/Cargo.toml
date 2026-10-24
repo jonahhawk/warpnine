@@ -1,0 +1,22 @@
+[package]
+name = "warp-cam"
+description = "Toolpath generation (2D/3D operations) and post-processing for WarpNine"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+warp-core.workspace = true
+warp-tools.workspace = true
+anyhow.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+glam.workspace = true
+geo.workspace = true
+rayon.workspace = true
+spade = "2"
+warp-gcode.workspace = true
+warp-nest.workspace = true
+
+[dev-dependencies]
+warp-sim.workspace = true

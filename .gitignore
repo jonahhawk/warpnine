@@ -1,0 +1,6 @@
+/target
+*.warp.bak
+/vendor/opennurbs/
+/vendor/occt/
+/vendor/occt-build/
+/vendor/occt-install/

@@ -1,0 +1,28 @@
+[package]
+name = "warp-app"
+description = "WarpNine CAM + CNC control desktop application"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[[bin]]
+name = "warpnine"
+path = "src/main.rs"
+
+[dependencies]
+warp-core.workspace = true
+warp-import-3dm.workspace = true
+warp-import-step.workspace = true
+warp-tools.workspace = true
+warp-gcode.workspace = true
+warp-cam.workspace = true
+warp-sim.workspace = true
+warp-machine.workspace = true
+warp-nest.workspace = true
+anyhow.workspace = true
+glam.workspace = true
+eframe.workspace = true
+rfd.workspace = true
+log.workspace = true
+env_logger.workspace = true
+serde_json.workspace = true

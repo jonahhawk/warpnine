@@ -1,0 +1,11 @@
+[package]
+name = "warp-gcode"
+description = "G-code parser and interpreter (RS274/NGC dialect used by Mach3/Mach4/LinuxCNC/UCCNC)"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+glam.workspace = true
+serde.workspace = true
+thiserror.workspace = true

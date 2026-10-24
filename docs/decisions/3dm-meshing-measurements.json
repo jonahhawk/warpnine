@@ -1,0 +1,79 @@
+{
+  "purpose": "Analytic-only candidates for I05; no arbitrary B-rep conversion or machining qualification",
+  "environment": "Windows-11-10.0.26200-SP0",
+  "target_tolerance_mm": 0.01,
+  "results": [
+    {
+      "shape": "sphere_seam",
+      "segments": 16,
+      "vertices": 114,
+      "triangles": 224,
+      "build_ms": 0.159,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "watertight": true,
+      "sampled_surface_or_exact_boundary_error_mm": 0.33757281974733466,
+      "hole_boundary_intrusion_mm": 0
+    },
+    {
+      "shape": "trimmed_annulus",
+      "segments": 16,
+      "vertices": 32,
+      "triangles": 32,
+      "build_ms": 0.026,
+      "boundary_edges": 32,
+      "nonmanifold_edges": 0,
+      "watertight": false,
+      "sampled_surface_or_exact_boundary_error_mm": 0.1921471959676957,
+      "hole_boundary_intrusion_mm": 0.05764415879030871
+    },
+    {
+      "shape": "extruded_annulus",
+      "segments": 16,
+      "vertices": 64,
+      "triangles": 128,
+      "build_ms": 0.047,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "watertight": true,
+      "sampled_surface_or_exact_boundary_error_mm": 0.1921471959676957,
+      "hole_boundary_intrusion_mm": 0.05764415879030871
+    },
+    {
+      "shape": "sphere_seam",
+      "segments": 128,
+      "vertices": 8066,
+      "triangles": 16128,
+      "build_ms": 12.17,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "watertight": true,
+      "sampled_surface_or_exact_boundary_error_mm": 0.005353348754431053,
+      "hole_boundary_intrusion_mm": 0
+    },
+    {
+      "shape": "trimmed_annulus",
+      "segments": 128,
+      "vertices": 256,
+      "triangles": 256,
+      "build_ms": 0.399,
+      "boundary_edges": 256,
+      "nonmanifold_edges": 0,
+      "watertight": false,
+      "sampled_surface_or_exact_boundary_error_mm": 0.0030118130379575003,
+      "hole_boundary_intrusion_mm": 0.0009035439113872501
+    },
+    {
+      "shape": "extruded_annulus",
+      "segments": 128,
+      "vertices": 512,
+      "triangles": 1024,
+      "build_ms": 0.977,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "watertight": true,
+      "sampled_surface_or_exact_boundary_error_mm": 0.0030118130379575003,
+      "hole_boundary_intrusion_mm": 0.0009035439113872501
+    }
+  ]
+}

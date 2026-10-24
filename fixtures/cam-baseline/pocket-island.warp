@@ -1,0 +1,106 @@
+{
+  "name": "pocket-island",
+  "display_units": "Millimeters",
+  "stock": {
+    "min": [
+      0.0,
+      0.0,
+      -5.0
+    ],
+    "max": [
+      40.0,
+      30.0,
+      0.0
+    ]
+  },
+  "curves": [
+    {
+      "pts": [
+        [
+          2,
+          2
+        ],
+        [
+          38,
+          2
+        ],
+        [
+          38,
+          28
+        ],
+        [
+          2,
+          28
+        ]
+      ],
+      "closed": true
+    },
+    {
+      "pts": [
+        [
+          15,
+          10
+        ],
+        [
+          25,
+          10
+        ],
+        [
+          25,
+          20
+        ],
+        [
+          15,
+          20
+        ]
+      ],
+      "closed": true
+    }
+  ],
+  "mesh": null,
+  "operations": [
+    {
+      "name": "pocket-island",
+      "enabled": true,
+      "kind": {
+        "Pocket": {
+          "pattern": "Offset",
+          "stepover": 1.0,
+          "finish_pass": true,
+          "inside_out": true,
+          "order": "LayerFirst"
+        }
+      },
+      "common": {
+        "tool": 1,
+        "heights": {
+          "clearance": 10.0,
+          "retract": 5.0,
+          "feed_height": 1.0,
+          "top": 0.0,
+          "bottom": -2.0
+        },
+        "feeds": {
+          "spindle_rpm": 10000.0,
+          "clockwise": true,
+          "feed": 600.0,
+          "plunge": 120.0,
+          "ramp": 240.0,
+          "coolant": "Off"
+        },
+        "stepdown": 1.0,
+        "stock_xy": 0.0,
+        "stock_z": 0.0,
+        "climb": true,
+        "entry": "Plunge",
+        "tolerance": 0.01,
+        "curves": [
+          0,
+          1
+        ],
+        "resolution": 0.25
+      }
+    }
+  ],
+  "post": "Mach3 / Mach4"
+}

@@ -1,0 +1,13 @@
+cmake_minimum_required(VERSION 3.16)
+cmake_policy(SET CMP0091 NEW)
+project(warp3dm LANGUAGES C CXX)
+set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded")
+set(CMAKE_CXX_STANDARD 17)
+add_subdirectory("${OPENNURBS_SOURCE}" sdk EXCLUDE_FROM_ALL)
+add_library(warp3dm STATIC bridge.cpp fixture.cpp qualify.cpp)
+target_link_libraries(warp3dm PRIVATE opennurbsStatic)
+target_compile_definitions(warp3dm PRIVATE ON_CMAKE_BUILD UNICODE _UNICODE)
+
+if(MSVC)
+  target_compile_options(warp3dm PRIVATE /EHsc)
+endif()

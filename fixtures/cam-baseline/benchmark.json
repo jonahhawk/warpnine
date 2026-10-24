@@ -1,0 +1,26 @@
+{
+  "manifest_version": 1,
+  "units": "mm",
+  "tools": "tools.json",
+  "cases": [
+    {"project": "pocket-island.warp", "expected": "path"},
+    {"project": "open-profile.warp", "expected": "path"},
+    {"project": "drill-pattern.warp", "expected": "path"},
+    {"project": "sculpted-parallel.warp", "expected": "path"},
+    {"project": "projected-open-curve.warp", "expected": "boundary curves must be closed", "issue": "M0-K01"}
+  ],
+  "warmup_runs": 1,
+  "measured_runs": 3,
+  "generation_tolerance_mm": 0.01,
+  "zmap_cell_mm": 0.25,
+  "inspection_segment_tolerance_mm": 0.01,
+  "simulation_max_cells": 200,
+  "rapid_estimate_mm_per_min": 3000.0,
+  "post": "PostConfig::mach3() snapshot included in results",
+  "metrics": ["generation_ms_samples", "generation_ms_median", "cut_length_mm", "rapid_length_mm", "estimated_motion_minutes", "move_count", "path_inline_capacity_bytes", "simulation_grid_bytes", "removed_volume_mm3", "rapid_collision_count", "posted_motion_count"],
+  "memory_scope": "path vector backing storage and stock grid only; excludes nested strings, CAM scratch, allocator overhead and process RSS",
+  "timing_scope": "generation only; load, post, simulation and compilation excluded",
+  "environment_required": ["OS", "architecture", "CPU", "logical_processors", "RAM", "rustc_version", "cargo_version", "build_profile", "rayon_threads"],
+  "performance_thresholds": null,
+  "notes": "Record a baseline before assigning targets; do not treat timing or sampled verification as machining certification."
+}

@@ -1,0 +1,12 @@
+cmake_minimum_required(VERSION 3.16)
+cmake_policy(SET CMP0091 NEW)
+project(warpstep LANGUAGES CXX)
+set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded")
+set(CMAKE_CXX_STANDARD 17)
+add_library(warpstep STATIC bridge.cpp)
+target_include_directories(warpstep PRIVATE "${OCCT_INCLUDE}")
+# Static OCCT: no dllimport/dllexport decorations, no plugin loading.
+target_compile_definitions(warpstep PRIVATE OCCT_STATIC_BUILD OCCT_NO_PLUGINS UNICODE _UNICODE NOMINMAX)
+if(MSVC)
+  target_compile_options(warpstep PRIVATE /EHsc /bigobj)
+endif()

@@ -1,0 +1,16 @@
+[package]
+name = "warp-core"
+description = "Geometry primitives and file import (DXF, STL) for WarpNine"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+anyhow.workspace = true
+serde.workspace = true
+glam.workspace = true
+dxf.workspace = true
+stl_io.workspace = true
+
+[dev-dependencies]
+serde_json.workspace = true

@@ -1,0 +1,16 @@
+[package]
+name = "warp-nest"
+description = "Sheet nesting: part definitions, sheets, constraints and placements for WarpNine"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+warp-core.workspace = true
+anyhow.workspace = true
+serde.workspace = true
+glam.workspace = true
+geo.workspace = true
+
+[dev-dependencies]
+serde_json.workspace = true

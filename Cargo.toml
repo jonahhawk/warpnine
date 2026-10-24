@@ -1,0 +1,42 @@
+[workspace]
+resolver = "2"
+members = ["crates/*"]
+default-members = ["crates/warp-app"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "MIT OR Apache-2.0"
+
+[workspace.dependencies]
+warp-core = { path = "crates/warp-core" }
+warp-import-3dm = { path = "crates/warp-import-3dm" }
+warp-import-step = { path = "crates/warp-import-step" }
+warp-tools = { path = "crates/warp-tools" }
+warp-gcode = { path = "crates/warp-gcode" }
+warp-cam = { path = "crates/warp-cam" }
+warp-sim = { path = "crates/warp-sim" }
+warp-machine = { path = "crates/warp-machine" }
+warp-nest = { path = "crates/warp-nest" }
+
+anyhow = "1"
+thiserror = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = { version = "1", features = ["float_roundtrip"] }
+glam = { version = "0.34", features = ["serde"] }
+rayon = "1"
+crossbeam-channel = "0.5"
+geo = "0.33"
+dxf = "0.6"
+stl_io = "0.11"
+libloading = "0.9"
+eframe = "0.37"
+rfd = "0.17"
+log = "0.4"
+env_logger = "0.11"
+
+[profile.dev.package."*"]
+opt-level = 2
+
+[profile.release]
+lto = "thin"
